@@ -248,8 +248,6 @@ if __name__ == "__main__":
     logging.info("STEP 6-10. conll 2014")
     maybe_do(fp.CONLL2014_SP_ORI, spell.check, (fp.CONLL2014_ORI, fp.CONLL2014_SP_ORI))
 
-    logging.info("STEP 6-11. jfleg")
-    maybe_do(fp.JFLEG_SP_ORI, spell.check, (fp.JFLEG_ORI, fp.JFLEG_SP_ORI))
     #
     logging.info("STEP 7. bpe-tokenize")
     logging.info("STEP 7-1. fce")
@@ -292,7 +290,4 @@ if __name__ == "__main__":
     maybe_do(fp.CONLL2014_TOK_ORI, bpe.bpe_tokenize, (fp.BPE_MODEL, fp.CONLL2014_SP_ORI, fp.CONLL2014_TOK_ORI))
     maybe_do(fp.CONLL2014_TOK_COR, bpe.bpe_tokenize, (fp.BPE_MODEL, fp.CONLL2014_COR, fp.CONLL2014_TOK_COR))
 
-    logging.info("STEP 7-11. jfleg")
-    maybe_do(fp.JFLEG_TOK_ORI, bpe.bpe_tokenize, (fp.BPE_MODEL, fp.JFLEG_SP_ORI, fp.JFLEG_TOK_ORI))
-    # maybe_do(fp.JFLEG_TOK_COR, bpe.bpe_tokenize, (fp.BPE_MODEL, fp.JFLEG_COR, fp.JFLEG_TOK_COR))
 
