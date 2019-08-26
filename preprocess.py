@@ -87,7 +87,9 @@ if __name__ == "__main__":
     maybe_download(f"{fp.bea19}/wi+locness",
                    f"wget https://www.cl.cam.ac.uk/research/nl/bea2019st/data/wi+locness_v2.1.bea19.tar.gz & "
                    f"tar -C {fp.bea19} -xvzf wi+locness_v2.1.bea19.tar.gz &"
-                   f"rm wi+locness_v2.1.bea19.tar.gz")
+                   f"rm wi+locness_v2.1.bea19.tar.gz & "
+                   f"wget https://www.cl.cam.ac.uk/research/nl/bea2019st/data/ABCN.bea19.test.orig & "
+                   f"mv ABCN.bea19.test.orig {fp.WI_TEST_ORI}")
 
     logging.info("STEP 0-6. Download LANG8")
     logging.info(f"NO PUBLIC DATA AVAILABLE.\n "
