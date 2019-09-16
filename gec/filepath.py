@@ -4,8 +4,7 @@ import os
 class Path:
 
     # set your root path here
-    root = "/root/helo_word"
-    # root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     # hunspell
     aff = f"{root}/data/language_model/dicts/en_AU.aff"
@@ -33,8 +32,7 @@ class FilePath(object):
     def __init__(self):
 
         # set your root path here
-        self.root = "/root/helo_word"
-        # self.root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
         self.gutenberg = f"{self.root}/data/gutenberg"
         self.tatoeba = f"{self.root}/data/tatoeba"
