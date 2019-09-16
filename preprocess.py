@@ -109,12 +109,12 @@ if __name__ == "__main__":
 
     logging.info("STEP 0-8. Download language model")
     os.makedirs(os.path.dirname(filepath.Path.lm_path), exist_ok=True)
-    os.makedirs(filepath.Path.lm_databin, exist_ok=True)
+    os.makedirs(os.path.dirname(filepath.Path.lm_dict), exist_ok=True)
     maybe_download(filepath.Path.lm_databin,
                    f"wget https://dl.fbaipublicfiles.com/fairseq/models/wiki103_fconv_lm.tar.bz2 & "
                    f"tar -xvf wiki103_fconv_lm.tar.bz2 & "
                    f"mv wiki103.pt {filepath.Path.lm_path} & "
-                   f"mv dict.txt {filepath.Path.lm_databin} & "
+                   f"mv dict.txt {filepath.Path.lm_dict} & "
                    f"rm wiki103_fconv_lm.tar.bz2")
 
     # logging.info("STEP 0-8. Download M2 Scorer")
