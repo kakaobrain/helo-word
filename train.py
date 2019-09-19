@@ -38,7 +38,7 @@ def train(databin_path, model_config, ckpt_dir, restore_ckpt, ngpu):
     logging.info(f"[Train] {prompt}")
 
     if restore_ckpt is not None:
-        finetune_ckpt = util.change_ckpt_dir(restore_ckpt, ckpt_dir)
+        finetune_ckpt = os.path.basename(util.change_ckpt_dir(restore_ckpt, ckpt_dir))
         logging.info(f"[Train] copy the ckpt {restore_ckpt} into {finetune_ckpt}")
         os.system(f"cp {restore_ckpt} {finetune_ckpt}")
 
